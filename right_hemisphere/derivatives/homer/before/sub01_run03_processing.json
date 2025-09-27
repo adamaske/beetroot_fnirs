@@ -1,0 +1,21 @@
+{
+	"Processing":{
+		"ProcessingElement":"sub01_run03",
+		"ApplicationName":"Homer3",
+		"Version":"v1.87.0",
+		"Dependencies":{
+			"Utils":"v1.8.3",
+			"DataTree":"v1.22.0",
+			"FuncRegistry":"v1.5.1"
+		},
+		"DateTime":"September 27, 2025,   18:45:30",
+		"tIncMan":[1,3475,1],
+		"mlActMan":[],
+		"FunctionCalls":[
+			"dod = hmrR_Intensity2OD(data);",
+			"dod = hmrR_BandpassFilt(dod, 0.010, 0.100);",
+			"dc = hmrR_OD2Conc(dod, probe, [1.0 1.0]);",
+			"[dcAvg, dcAvgStd, nTrials, dcNew, dcResid, dcSum2, beta, R, hmrstats] = hmrR_GLM(dc, stim, probe, mlActAuto, Aaux, tIncAuto, rcMap, [-2.0 20.0], 1, 1, [5.0 2.5], 20.0, 2, 3, 0);"
+		]
+	}
+}
